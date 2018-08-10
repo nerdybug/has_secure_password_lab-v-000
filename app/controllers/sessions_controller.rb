@@ -5,7 +5,10 @@ class SessionsController < ApplicationController
   end
 
   def create
+    user = User.find_by(name: params[:name])
+    if user && user.authenticate(params[:user][:name])
 
+    end
   end
 
   def destroy
