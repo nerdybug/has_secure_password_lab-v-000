@@ -1,5 +1,5 @@
 class RemoveColumn < ActiveRecord::Migration
   def change
-    delete_column :users, :password_confirmation
+    remove_column :users, :password_confirmation, :string
   end
 end
