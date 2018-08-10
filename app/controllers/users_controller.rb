@@ -7,7 +7,10 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     if !@user.save
-
+      redirect_to '/signup'
+    else
+      session[:user_id] = @user.id
+      redirect_to '/home'
     end
 
   end
