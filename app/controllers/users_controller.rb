@@ -12,7 +12,6 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to '/home'
     end
-
   end
 
   private
