@@ -11,14 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180810224851) do
-
-  create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "password_digest"
-    t.string   "password_confirmation"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-  end
+ActiveRecord::Schema.define(version: 20180810230501) do
 
 end

@@ -1,1 +1,6 @@
-form_for @user
+<%= form_for @user do %>
+  <%= label_tag :name
+  text_field :name
+  label_tag :password
+  password_field_tag
+<% end %>
