@@ -9,6 +9,9 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:user][:name])
       session[:user_id] = user.id
       redirect_to home_path(user)
+    else
+      flash[:error] = "Nope - try again."
+      redirect_to login_path
     end
   end
 
