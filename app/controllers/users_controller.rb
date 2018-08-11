@@ -6,12 +6,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    if @user.save
-      session[:user_id] = @user.id
-      redirect_to home_path
-    else
-      redirect_to signup_path
-    end
+    return redirect_to controller: 'users', action: 'new' unless @user.save
+    session[:user_id] = @user.id
+    redirect_to controller: 'users', action: 'home'
   end
 
   def home
