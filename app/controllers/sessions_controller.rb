@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       redirect_to home_path(user)
     else
       flash[:error] = "Nope - try again."
-      redirect_to signup_path
+      redirect_to login_path
     end
   end
 
